@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  dnsmasq:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: dnsmasq
+    restart: unless-stopped
+    ports:
+      - "53:53/udp"
+    labels:
+      - traefik.enable=false
+
+
