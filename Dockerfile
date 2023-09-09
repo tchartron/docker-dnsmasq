@@ -1,5 +1,5 @@
 FROM alpine:3.16
-LABEL maintainer="tchartron@vinatis.com"
+LABEL maintainer="contact@tchartron.com"
 RUN apk update \
     && apk --no-cache add dnsmasq tini
 COPY dnsmasq.conf /etc/dnsmasq.conf
